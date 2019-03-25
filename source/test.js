@@ -1,5 +1,5 @@
 import test from 'tape';
-import { add2, add3 } from './index';
+import { add2, add3, inc } from './index';
 
 // test('No tests yet!', assert => {
 //   const msg = 'should have tests';
@@ -28,5 +28,14 @@ test('add3', assert => {
   assert.same(add3(1)(2)(3), expected, msg);
   assert.same(add3(1, 2)(3), expected, msg);
   assert.same(add3(1)(2, 3), expected, msg);
+  assert.end();
+});
+
+test('inc', assert => {
+  const msg = 'should take a number and return the sum of number and 1';
+  const actual = inc(4);
+  const expected = 5;
+
+  assert.same(actual, expected, msg);
   assert.end();
 });
