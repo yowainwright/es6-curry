@@ -1,5 +1,5 @@
 import test from 'tape';
-import { add2, add3, inc } from './index';
+import { add2, add3, inc, compose2, trace } from './index';
 
 // test('No tests yet!', assert => {
 //   const msg = 'should have tests';
@@ -36,6 +36,25 @@ test('inc', assert => {
   const actual = inc(4);
   const expected = 5;
 
+  assert.same(actual, expected, msg);
+  assert.end();
+});
+
+test('function composition', assert => {
+  const msg = '';
+  const g = n => n + 1;
+  const f = n => n * 2;
+  const h = compose2(f, g);
+  const actual = h(20);
+  const expected = 42;
+  assert.same(actual, expected, msg);
+  assert.end();
+});
+
+test('function composition', assert => {
+  const msg = '';
+  const actual = trace('foo')('bar');
+  const expected = undefined;
   assert.same(actual, expected, msg);
   assert.end();
 });
