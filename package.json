@@ -24,7 +24,7 @@
     "watch": "1.0.2"
   },
   "dependencies": {
-    "@std/esm": "0.25.5"
+    "@std/esm": "0.26.0"
   },
   "@std/esm": {
     "esm": "js"
