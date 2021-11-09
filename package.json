@@ -20,7 +20,7 @@
   "homepage": "https://github.com/learn-javascript-courses/es6-curry#readme",
   "devDependencies": {
     "eslint": "8.2.0",
-    "tape": "5.3.0",
+    "tape": "5.3.1",
     "watch": "1.0.2"
   },
   "dependencies": {
